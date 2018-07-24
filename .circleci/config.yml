@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: altionsbs/cci-centos-altion:0.0.1
     steps:
       - checkout
       - run:
@@ -13,4 +13,4 @@ jobs:
           command: date
       - run:
           name: Grails and Java installation
-          command: sudo apt-get install python-software-properties
+          command: grails test-app
