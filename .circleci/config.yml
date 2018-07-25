@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: altionsbs/cci-centos-altion:0.0.6
     steps:
+	  - run: yum install sudo -y
       - checkout
       - run:
           name: Greeting
@@ -13,4 +14,4 @@ jobs:
           command: date
       - run:
           name: Grails and Java installation
-          command: sudo grails help
+          command: sudo su && grails help
