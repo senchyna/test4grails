@@ -13,4 +13,4 @@ jobs:
           command: date
       - run:
           name: Grails and Java installation
-          command: export GRAILS_HOME="~/grails" && export PATH="$PATH:$GRAILS_HOME/bin" && grails help
+          command: sudo su && grails help
