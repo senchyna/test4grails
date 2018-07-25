@@ -13,7 +13,4 @@ jobs:
           command: date
       - run:
           name: Grails and Java installation
-          command: java -version
-		  command: export GRAILS_HOME="~/grails"
-          command: export PATH="$PATH:$GRAILS_HOME/bin"
-		  command: grails help
+          command: export GRAILS_HOME="~/grails" && export PATH="$PATH:$GRAILS_HOME/bin" && grails help
