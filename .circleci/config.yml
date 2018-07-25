@@ -15,5 +15,8 @@ jobs:
           name: wassup
           command: yum install sudo -y
       - run:
+          name: howaya
+          command: sudo su
+      - run:
           name: Grails and Java installation
-          command: sudo su && grails help
+          command: grails help
