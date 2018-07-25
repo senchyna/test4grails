@@ -13,4 +13,4 @@ jobs:
           command: date
       - run:
           name: Grails and Java installation
-          command: grails test-app
+          command: java --version
