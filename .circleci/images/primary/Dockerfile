@@ -17,3 +17,7 @@ RUN yes | /bin/bash -l -c 'sdk install grails 1.3.9'
 RUN wget https://www.kernel.org/pub/software/scm/git/git-2.9.5.tar.gz  && tar xzf git-2.9.5.tar.gz && cd git-2.9.5 && make configure && ./configure --prefix=/usr/local && make install && echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc && cd .. && rm -rf git-2.9.5.tar.gz && rm -rf git-2.9.5 && chown -R root:root /root
 RUN source /etc/bashrc
 RUN yes | /bin/bash -l -c 'git --version'
+RUN ls /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.181.x86_64
+RUN echo "export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.181.x86_64" >> /etc/profile
+RUN source /etc/bashrc
+RUN yes | /bin/bash -l -c 'grails help'
