@@ -14,7 +14,7 @@ RUN yes | /bin/bash -l -c 'sdk install grails 1.3.9'
 RUN yum install tk -y
 RUN yum install autoconf cpio curl-devel expat-devel gcc gettext-devel make openssl-devel perl-ExtUtils-MakeMaker zlib-devel -y
 RUN wget https://www.kernel.org/pub/software/scm/git/git-2.9.5.tar.gz
-RUN tar xzf git-2.9.5.tar.gz
+RUN tar xzf git-2.9.5.tar.gz && chown -R root:root /root
 RUN cd git-2.9.5 && make configure
 RUN ./git-2.9.5/configure --prefix=/usr/local
 RUN cd git-2.9.5 && make install
