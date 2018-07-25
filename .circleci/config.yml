@@ -16,4 +16,4 @@ jobs:
           command: yum install sudo -y
       - run:
           name: Grails and Java installation
-          command: sudo grails help
+          command: source /etc/bashrc && grails help
