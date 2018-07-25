@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: altionsbs/cci-centos-altion:0.0.1
+      - image: altionsbs/cci-centos-altion:0.0.2
     steps:
       - checkout
       - run:
