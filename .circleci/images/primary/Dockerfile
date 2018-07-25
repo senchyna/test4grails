@@ -24,3 +24,5 @@ RUN yes | /bin/bash -l -c 'git --version'
 RUN yum install tar -y
 RUN yum install gzip -y
 RUN yum install ca-certificates -y
+RUN rm -rf git-2.9.5
+RUN rm -rf git-2.9.5.tar.gz
