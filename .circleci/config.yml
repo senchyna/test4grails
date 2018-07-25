@@ -4,7 +4,6 @@ jobs:
     docker:
       - image: altionsbs/cci-centos-altion:0.0.6
     steps:
-	  - run: yum install sudo -y
       - checkout
       - run:
           name: Greeting
@@ -12,6 +11,9 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+      - run:
+          name: wassup
+          command: yum install sudo -y
       - run:
           name: Grails and Java installation
           command: sudo su && grails help
